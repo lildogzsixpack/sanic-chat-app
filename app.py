@@ -9,7 +9,8 @@ SANIC_PORT = os.environ.get('SANIC_PORT', 8000)
 SANIC_DEBUG = os.environ.get('SANIC_DEBUG', False)
 
 app = Sanic()
-
+# Serving static files
+app.static('/static', os.path.join(BASE_DIR, 'static/'))
 # Serving index page
 app.static('/', os.path.join(BASE_DIR, 'templates/index.html'), name='index')
 
