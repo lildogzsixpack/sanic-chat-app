@@ -8,8 +8,16 @@ $(document).ready(function() {
 
 $("#form").on('submit', function (e) {
     e.preventDefault();
-
+    var nickName =$("#nickField").val();
     var data = $("#btn-input").val();
-    console.log(data);
+    var node = [
+        '<div class="row message-bubble">',
+        '<p id="nick" class="text-muted">' + nickName + '</p>',
+        '<span id="msg">' + data + '</span>',
+        '</div>'
+    ].join('');
+
+
+    $("#newMsg").append(node);
     $("#btn-input").val("");
 });
