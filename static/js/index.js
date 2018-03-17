@@ -9,7 +9,6 @@ $(document).ready(function() {
         ws.onmessage = function (event) {
             var data = JSON.parse(event.data);
 
-            var nickName = $("#nickField").val();
             var node = [
                 '<div class="row message-bubble">',
                 '<p id="nick" class="text-muted">' + data['nickname'] + '</p>',
