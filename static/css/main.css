@@ -6,7 +6,9 @@ span {
     text-align: center;
     width: 100%;
 }
-
+.hide{
+    display: none;
+}
 .top-bar {
     background: #666;
     color: white;
@@ -33,4 +35,17 @@ span {
     overflow-y: scroll;
     height: 500px;
     position: relative;
+}
+h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 3em;
+}
+
+#nickForm {
+    padding-top: 350px;
+}
+
+#nickField{
+    width: 90%;
 }

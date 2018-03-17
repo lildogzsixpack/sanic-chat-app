@@ -9,8 +9,16 @@
     <link rel="stylesheet" href="/static/css/main.css">
     <title>Sanic Chat</title>
 </head>
+
 <body>
     <div class="container">
+        <form class="nickname-form" id="nickForm">
+            <h2>Welcome to Sanic Chat. Please enter your nickname</h2>
+            <input id="nickField" type="text" class="input-sm" placeholder="Enter Your Nickname" required>
+            <input class="btn btn-md btn-success" id="nickSubmit" type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="container hide" id="msgBox">
         <div class="row">
             <div class="panel panel-primary">
                 <div class="panel-heading top-bar">Welcome to Sanic Chat !!</div>
@@ -31,10 +39,10 @@
                     </div>
                     <span id="chat"></span>
                     <div class="panel-footer">
-                        <div class="input-group" id="form">
-                            <input id="btn-input" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." required>
-                            <button class="btn btn-md btn-primary" id="submit" type="submit">Send</button>
-                        </div>
+                        <form class="input-group" id="form">
+                            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Write your message here..." required>
+                            <input class="btn btn-md btn-primary" id="submit" type="submit" value="Send">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -42,8 +50,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/static/js/index.js">
-
-    </script>
+    <script type="text/javascript" src="/static/js/index.js"></script>
 </body>
+
 </html>
