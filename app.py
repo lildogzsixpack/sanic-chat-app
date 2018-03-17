@@ -1,5 +1,5 @@
 import os
-import json
+import ujson as json
 from sanic import Sanic
 # from sanic.response import json_response
 
