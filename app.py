@@ -38,7 +38,8 @@ async def chat(request, ws):
         while True:
             msg = await ws.recv()
             msg = json.dumps({"nickname": nickname, "message": msg})
-            [await user.send(msg) for user in CONNECTIONS]
+            for user in CONNECTIONS:
+                await user.send(msg)
     finally:
         CONNECTIONS.remove(ws)
         print("{} has been disconnected!".format(nickname))
