@@ -1,0 +1,28 @@
+.panel {
+    text-align: center;
+    width: 100%;
+}
+span{
+    padding-left: 10px;
+}
+.top-bar {
+  background: #666;
+  color: white;
+  padding: 10px;
+
+}
+.message-bubble {
+    padding: 10px 0px 10px 0px;
+}
+
+.message-bubble:nth-child(2n) {
+    background-color: #F5F5F5;
+}
+
+.panel-body {
+    padding: 0px;
+}
+
+.msg_container{
+    overflow-y: scroll;
+}
