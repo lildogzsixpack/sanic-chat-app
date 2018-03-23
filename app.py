@@ -1,4 +1,5 @@
 import os
+import bleach
 import ujson as json
 from sanic import Sanic
 # from sanic.response import json_response
@@ -37,7 +38,7 @@ async def chat(request, ws):
     try:
         while True:
             msg = await ws.recv()
-            msg = json.dumps({"nickname": nickname, "message": msg})
+            msg = json.dumps({"nickname": nickname, "message": bleach.linkify(bleach.clean(msg))})
             for user in CONNECTIONS:
                 await user.send(msg)
     finally:
